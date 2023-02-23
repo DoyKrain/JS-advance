@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+    <div id="i1">div1</div>
+    <div class="c1">c1</div>
+    <div class="c1">c1</div>
+    <div class="c1">c1</div>
+    <div class="outer">
+      <div class="c1">item</div>
+    </div>
+    <script>
+      var ele = document.getElementById("i1");
+      console.log(ele);
+
+      var c = document.getElementsByClassName("c1");
+      console.log(c);
+
+      var ele2 = document.getElementsByTagName("div");
+      console.log(ele2);
+
+      var out = document.getElementsByClassName("outer")[0];
+      var inc1 = out.getElementsByClassName("c1");
+      console.log(inc1);
+      
+
+    </script>
+</body>
+
+</html>

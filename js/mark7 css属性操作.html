@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--    k1为自定义属性-->
+    <div class="c1" id="i1" k1="v1" value="xxx">我是你爹</div>
+
+    <script>
+      var el = document.querySelector(".c1");
+      console.log(el.getAttribute("k1"));
+      console.log(el.getAttribute("value"));
+      // 添加属性
+      el.setAttribute("k2","v2");
+      // 删除属性
+      el.removeAttribute("k1");
+    </script>
+</body>
+</html>

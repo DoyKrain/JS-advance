@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input class="c1" type="text">
+
+<script>
+    var ele = document.querySelector(".c1");
+    //从无到有 再次点击才触发.获取焦点事件
+    ele.onfocus = function () {
+        console.log("in");
+    }
+    //失去焦点事件
+    ele.onblur = function () {
+        console.log("out");
+    }
+
+</script>
+
+</body>
+</html>

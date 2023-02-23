@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .tab {
+            width: 800px;
+            height: 300px;
+            margin: 200px auto;
+        }
+
+        .tab-tittle {
+            background-color: #f7f7f7;
+            border: 1px solid #eee;
+            border-bottom: 1px solid #e4393c;
+            display: block;
+        }
+
+        .tab ul {
+            list-style: none;
+        }
+
+        .tab .tab-tittle li {
+            display: inline-block;
+        }
+
+        .current {
+            background-color: #e4393c;
+            color: #fff;
+            cursor: default;
+        }
+
+        .tab-tittle li {
+            padding: 10px 25px;
+            font-size: 14px;
+        }
+
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="tab">
+    <ul class="tab-tittle">
+        <li class="current" index="0">商品介绍</li>
+        <li class="" index="1">规格与包装</li>
+        <li class="" index="2">售后保障</li>
+        <li class="" index="3">商品评价</li>
+        <li class="" index="4">手机社区</li>
+    </ul>
+
+    <ul class="details">
+        <li class=" ">商品介绍...</li>
+        <li class="hide">规格与包装...</li>
+        <li class="hide">售后保障...</li>
+        <li class="hide">商品评价...</li>
+        <li class="hide">手机社区...</li>
+    </ul>
+</div>
+
+<script>
+    var titles = document.querySelectorAll(".tab-tittle li");
+    var details_list = document.querySelectorAll(".details li");
+
+    for (var i = 0; i < titles.length; i++) {
+        titles[i].onclick = function () {
+            for (var j = 0; j < titles.length; j++) {
+                titles[j].classList.remove("current");
+                details_list[j].classList.add("hide");
+            }
+            this.classList.add("current");
+
+            var position = this.getAttribute("index");
+            details_list[position].classList.remove("hide");
+        }
+    }
+</script>
+
+</body>
+</html>

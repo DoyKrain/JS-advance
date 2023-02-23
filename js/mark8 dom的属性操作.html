@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+      .c1{
+        background-color: red;
+      }
+      .c2{
+        color: blue;
+      }
+      .hide{
+        display: none;
+      }
+    </style>
+</head>
+<body>
+    <div class="c1">hello world</div>
+    <script>
+      var ele = document.querySelector(".c1");
+      ele.onclick = function (){
+        // this.setAttribute("class","c1 c2"); 在知道该类下面有几个属性时可用
+        this.classList.add("hide");
+      }
+    </script>
+</body>
+</html>

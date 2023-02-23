@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+      function foo(self){
+        // alert(123)
+        // var v = document.querySelector("#i1");
+        // console.log(v.innerHTML);
+        console.log(self);
+        console.log(self.innerHTML);
+      }
+    </script>
+</head>
+<body>
+    <div ondblclick="foo(this)">click</div>
+    <p id="i1">PPp</p>
+
+</body>
+</html>

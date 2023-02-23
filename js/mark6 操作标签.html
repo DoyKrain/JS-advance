@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+      .box{
+        width: 400px;
+        border: 1px solid #ccc;
+        margin: 100px auto;
+      }
+      .box input{
+        width: 370px;
+        height: 30px;
+        border: 0;
+        outline: none;
+      }
+    </style>
+</head>
+<body>
+    <button>按钮</button>
+    <input type="text" placeholder="ddd"><br>
+    <div class="box">
+      <label></label>
+      <input type="password" placeholder="请输入密码">
+    </div>
+
+    <script>
+      var va = document.querySelector("button");
+      var va1 = document.querySelector("input");
+      va.onclick = function(){
+        va1.placeholder = "我是你爹";
+        this.disabled = true;
+        // this指向的是事件函数的调用者 va
+      }
+
+    </script>
+</body>
+</html>

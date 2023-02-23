@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul class="lis">
+    <li>111</li>
+    <li>222</li>
+    <li>333</li>
+</ul>
+<div id="i1">ppp</div>
+<script>
+    /*
+        DOM对象.on事件 = func(){
+            //事件触发代码
+            事件函数中的this:代指的是触发事件的标签
+        }
+     */
+    var ele = document.getElementById("i1");
+    ele.onclick = function () {
+        // alert(123);
+        console.log(ele.innerHTML);
+        //相同效果
+        console.log(this.innerHTML);
+    }
+    var ele2 = document.querySelectorAll(".lis li");
+    for (var i = 0; i < ele2.length; i++) {
+        ele2[i].onclick = function () {
+            //console.log(ele2[i].innerHTML)报错,i值循环结束为lenth+1,
+            // onclick,匿名函数要点击后才生效。
+            console.log(this.innerHTML)
+        }
+    }
+</script>
+</body>
+</html>

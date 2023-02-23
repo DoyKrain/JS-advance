@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+      function showtime(){
+        //获取当前时间字符串
+        var now = new Date();
+        now_str = now.toLocaleString();
+        //将时间字符串赋值给value
+        var l1 = document.getElementById("i1");
+        l1.value = now_str;
+      }
+      var id;
+      function start(){
+          if(id==undefined){
+              showtime();
+              id = setInterval(showtime,1000);
+          }
+      }
+      function end(){
+          clearInterval(id);
+          id = undefined;
+      }
+
+    </script>
+</head>
+<body>
+    <input type="text" id="i1">
+    <button type="button" onclick="start()">开始</button>
+    <button type="button" onclick="end()">停止</button>
+</body>
+</html>

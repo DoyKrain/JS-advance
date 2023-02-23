@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button class="add-btn">添加节点</button>
+<button class="delete-btn">删除节点</button>
+<button class="revise-btn">修改节点</button>
+<div class="c1">
+    <h3 class="h1">hello JS</h3>
+
+    <h3 class="h2">hello I'm your father</h3>
+</div>
+<script>
+    var add_but = document.querySelector(".add-btn");
+    var delete_but = document.querySelector(".delete-btn");
+    var revise_but = document.querySelector(".revise-btn");
+
+    var c1 = document.querySelector(".c1");
+    var h1 = document.querySelector(".h1");
+    var h2 = document.querySelector(".h2");
+
+    add_but.onclick = function () {
+        //创建结点
+        var ele = document.createElement("img");
+        ele.src = "https://www.vcg.com/creative/1393111813";
+        console.log(ele);
+        //添加节点进入c1的最下面（追加）
+        // c1.appendChild(ele);
+        //将节点ele插入进class h2的前面
+        c1.insertBefore(ele, h2);
+    }
+
+    delete_but.onclick = function () {
+        c1.removeChild(h1);
+    }
+
+    revise_but.onclick = function () {
+        c1.replaceChild(h2,h1);
+    }
+</script>
+</body>
+</html>
